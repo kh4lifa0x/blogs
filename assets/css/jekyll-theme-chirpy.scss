@@ -1,12 +1,22 @@
 ---
 ---
 
-@use "main";
+@use 'abstracts/variables' with (
+  $theme: '{{ site.theme_mode }}'
+);
+
+/* prettier-ignore */
+@use 'main
+{%- if jekyll.environment == 'production' -%}
+  .bundle
+{%- endif -%}
+';
 
 /* ===================================================================
    Custom blog styling on top of Chirpy
    - Compact post cards: small square thumbnail on the left
    - Subtle, elegant animations
+   - Centered pagination + readable theme-mode menu in dark mode
    =================================================================== */
 
 /* ---------- Compact list / pinned cards ---------- */
@@ -82,6 +92,28 @@
   .post-meta {
     font-size: 0.75rem !important;
     margin-top: auto;
+  }
+}
+
+/* ---------- Pagination: horizontal & centered at the bottom ---------- */
+.pagination {
+  justify-content: center;
+  flex-wrap: wrap;
+  row-gap: 0.4rem;
+}
+
+/* ---------- Theme-mode menu: readable items in dark (and light) mode ---------- */
+#sidebar .sidebar-bottom #mode-toggle + .dropdown-menu {
+  .dropdown-item {
+    color: var(--text-color) !important;
+
+    i {
+      color: inherit !important;
+    }
+
+    &:hover {
+      color: var(--text-color) !important;
+    }
   }
 }
 
