@@ -1,6 +1,7 @@
 ---
 title: "MuddyWater: Inside Iran’s Persistent Cyber-Espionage Group Targeting the Middle East"
 date: 2025-08-24 22:29:46 +0200
+pin: true
 categories: [Threat Intelligence]
 tags: [investigation, threat-actors]
 image:

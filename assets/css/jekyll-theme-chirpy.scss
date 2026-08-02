@@ -1,0 +1,98 @@
+---
+---
+
+@use "main";
+
+/* ===================================================================
+   Custom animations for the blog (added on top of the Chirpy theme)
+   =================================================================== */
+
+/* Entrance: fade + slide up */
+@keyframes ak-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Gentle fade for the main content area on load */
+#main-wrapper {
+  animation: ak-fade-up 0.45s ease both;
+}
+
+/* Post cards on the home / list pages: staggered entrance */
+#post-list .card-wrapper {
+  animation: ak-fade-up 0.5s ease both;
+}
+
+@for $i from 1 through 12 {
+  #post-list .card-wrapper:nth-child(#{$i}) {
+    animation-delay: #{$i * 0.06}s;
+  }
+}
+
+/* Smooth hover lift on cards (home list + related posts) */
+.card-wrapper {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.18);
+  }
+}
+
+/* Pinned posts: subtle pulse on the pin icon so featured posts pop */
+@keyframes ak-pin-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.18);
+  }
+}
+
+#post-list .card-wrapper .pin i,
+#post-list .card-wrapper i.fa-thumbtack {
+  animation: ak-pin-pulse 2.2s ease-in-out infinite;
+}
+
+/* Sidebar avatar: soft zoom on hover */
+#avatar {
+  transition: transform 0.35s ease;
+
+  &:hover {
+    transform: scale(1.06);
+  }
+}
+
+/* Nav / sidebar links: animated underline-ish slide on hover already
+   handled by theme; add a small ease to trending tags */
+.post-tag {
+  transition: transform 0.15s ease, background-color 0.15s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  #main-wrapper,
+  #post-list .card-wrapper {
+    animation: none !important;
+  }
+
+  #post-list .card-wrapper .pin i,
+  #post-list .card-wrapper i.fa-thumbtack {
+    animation: none !important;
+  }
+
+  .card-wrapper:hover {
+    transform: none;
+  }
+}

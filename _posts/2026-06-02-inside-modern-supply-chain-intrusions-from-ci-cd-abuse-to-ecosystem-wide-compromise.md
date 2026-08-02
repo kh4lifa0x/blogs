@@ -1,6 +1,7 @@
 ---
 title: "Inside Modern Supply Chain Intrusions: From CI/CD Abuse to Ecosystem-Wide Compromise"
 date: 2026-06-02 11:42:53 +0200
+pin: true
 categories: [Supply Chain Security]
 tags: [investigation, supply-chain, teampcp, threat-actors]
 image:
