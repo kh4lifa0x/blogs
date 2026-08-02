@@ -1,7 +1,7 @@
 ---
 title: "BlackLock Ransomware: A Growing Threat Across Industries"
 date: 2025-03-17 00:11:11 +0200
-categories: [Malware Analysis, Threat Intelligence]
+categories: [Ransomware]
 tags: [malware-analysis, threat-actors]
 image:
   path: blacklock.jpeg

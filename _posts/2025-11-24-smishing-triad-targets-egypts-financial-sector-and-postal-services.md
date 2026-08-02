@@ -1,7 +1,7 @@
 ---
 title: "Smishing Triad Targets Egypt’s Financial Sector and Postal Services"
 date: 2025-11-24 14:50:17 +0200
-categories: [Infrastructure adversary hunting, Threat Intelligence]
+categories: [Threat Intelligence]
 tags: [investigation, threat-actors]
 image:
   path: GettyImages-1433299887-scaled.webp

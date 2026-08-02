@@ -1,7 +1,7 @@
 ---
 title: "Akira Ransomware Road To Glory"
 date: 2025-04-14 23:52:14 +0200
-categories: [Malware Analysis, Threat Intelligence]
+categories: [Ransomware]
 tags: [malware-analysis]
 image:
   path: WhatsApp-Image-2025-04-20-at-12.58.53-AM.jpeg

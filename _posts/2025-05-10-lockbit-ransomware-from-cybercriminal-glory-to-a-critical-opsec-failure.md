@@ -1,7 +1,7 @@
 ---
 title: "LockBit Ransomware: From Cybercriminal Glory to a Critical OPSEC Failure"
 date: 2025-05-10 11:27:37 +0200
-categories: [Threat Intelligence]
+categories: [Ransomware]
 tags: [kimsuky, opsec-failure, ransomware]
 image:
   path: DD188ECF-7C57-4154-81C1-33A6DAB2A381.png

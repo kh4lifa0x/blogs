@@ -1,7 +1,7 @@
 ---
 title: "From Windows Telemetry to Arrest: How Microsoft’s GDID Helped Connect the Dots"
 date: 2026-07-08 14:38:36 +0200
-categories: [Threat Intelligence, Vulnerability Intelligence]
+categories: [Threat Intelligence]
 tags: [investigation, threat-actors]
 image:
   path: VPNS-hIDE-IPS-banner.jpg-scaled.jpeg

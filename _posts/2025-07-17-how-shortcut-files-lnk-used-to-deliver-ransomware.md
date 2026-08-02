@@ -1,7 +1,7 @@
 ---
 title: "How Shortcut Files (.LNK) used to Deliver Ransomware"
 date: 2025-07-17 09:08:07 +0200
-categories: [Malware Analysis, Threat Intelligence]
+categories: [Malware Analysis]
 tags: [investigation, ransomware]
 image:
   path: 71f929ee-eb9a-49f8-bed9-46ea1c412f83.png

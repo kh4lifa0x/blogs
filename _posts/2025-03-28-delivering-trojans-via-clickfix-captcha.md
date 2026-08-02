@@ -1,7 +1,7 @@
 ---
 title: "Delivering Trojans Via ClickFix Captcha"
 date: 2025-03-28 00:20:32 +0200
-categories: [Malware Analysis, Threat Intelligence]
+categories: [Malware Analysis]
 tags: [malware-analysis]
 image:
   path: WhatsApp-Image-2025-04-20-at-2.19.41-AM.jpeg

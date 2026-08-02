@@ -1,7 +1,7 @@
 ---
 title: "Qilin Ransomware: A Deep Dive into Operations & OPSEC Breakdowns"
 date: 2025-08-05 23:04:05 +0200
-categories: [Threat Intelligence]
+categories: [Ransomware]
 tags: [investigation, opsec-failure, ransomware]
 image:
   path: qilin.jpg

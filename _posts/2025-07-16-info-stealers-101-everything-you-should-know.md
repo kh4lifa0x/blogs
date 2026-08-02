@@ -1,7 +1,7 @@
 ---
 title: "Info Stealers 101: Everything You Should Know"
 date: 2025-07-16 01:09:06 +0200
-categories: [Malware Analysis, Threat Intelligence]
+categories: [Malware Analysis]
 tags: [darkweb, malware-analysis, threat-actors]
 image:
   path: infostealers_blog_header.svg

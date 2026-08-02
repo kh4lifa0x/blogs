@@ -1,7 +1,7 @@
 ---
 title: "Operational Analysis of Ransomware Attack Lifecycle"
 date: 2025-06-05 00:50:32 +0200
-categories: [Threat Intelligence]
+categories: [Ransomware]
 tags: [info-stealer, ransomware, threat-actors]
 image:
   path: ChatGPT-Image-Jun-5-2025-03_48_52-AM.png

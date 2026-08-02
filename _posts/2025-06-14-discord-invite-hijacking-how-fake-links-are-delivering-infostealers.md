@@ -1,7 +1,7 @@
 ---
 title: "Discord Invite Hijacking: How Fake Links Are Delivering Infostealers"
 date: 2025-06-14 12:06:41 +0200
-categories: [Malware Analysis, Threat Intelligence]
+categories: [Malware Analysis]
 media_subpath: /assets/img/posts/discord-invite-hijacking-how-fake-links-are-delivering-infostealers
 toc: true
 ---

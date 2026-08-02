@@ -1,7 +1,7 @@
 ---
 title: "DragonForce Ransomware: From Hacktivism to Global Cyber Extortion"
 date: 2025-06-29 08:58:09 +0200
-categories: [Threat Intelligence]
+categories: [Ransomware]
 tags: [ransomware]
 image:
   path: dragonforce-ransomware-4-min.png

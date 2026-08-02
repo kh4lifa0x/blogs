@@ -1,7 +1,7 @@
 ---
 title: "Threat Profile: APT35 (Charming Kitten)"
 date: 2025-10-17 17:10:47 +0200
-categories: [Threat Intelligence, Threat Profile]
+categories: [Threat Intelligence]
 tags: [apt35, charming-kitten, opsec-failure]
 image:
   path: apt35.jpeg

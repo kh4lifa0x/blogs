@@ -1,7 +1,7 @@
 ---
 title: "Suspicious ScreenConnect Abuse by Threat Actors"
 date: 2025-10-12 11:33:40 +0200
-categories: [Threat Intelligence]
+categories: [Malware Analysis]
 tags: [darkweb, threat-actors]
 image:
   path: screenconnect-1500.webp

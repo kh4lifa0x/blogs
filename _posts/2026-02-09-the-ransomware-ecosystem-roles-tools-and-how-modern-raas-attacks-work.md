@@ -1,7 +1,7 @@
 ---
 title: "The Ransomware Ecosystem: Roles, Tools, and How Modern RaaS Attacks Work"
 date: 2026-02-09 08:45:05 +0200
-categories: [Threat Intelligence, Threat Profile]
+categories: [Ransomware]
 tags: [ransomware, threat-actors]
 image:
   path: Ransomware-EcoSystem.jpeg

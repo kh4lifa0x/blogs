@@ -1,7 +1,7 @@
 ---
 title: "Threat Profile: Conti Ransomware Group"
 date: 2025-09-29 08:46:41 +0200
-categories: [Threat Intelligence]
+categories: [Ransomware]
 tags: [conti, ransomware, threat-actors]
 image:
   path: Conti-ransomware.jpg

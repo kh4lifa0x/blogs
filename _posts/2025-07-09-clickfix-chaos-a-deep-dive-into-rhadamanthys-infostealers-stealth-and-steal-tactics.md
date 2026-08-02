@@ -1,7 +1,7 @@
 ---
 title: "ClickFix Chaos: A Deep Dive into Rhadamanthys Infostealer’s Stealth and Steal Tactics"
 date: 2025-07-09 17:36:34 +0200
-categories: [Malware Analysis, Threat Intelligence]
+categories: [Malware Analysis]
 tags: [investigation, malware-analysis]
 image:
   path: IMG-20250623-WA0018.jpg

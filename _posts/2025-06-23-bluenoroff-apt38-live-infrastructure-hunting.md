@@ -1,7 +1,7 @@
 ---
 title: "Bluenoroff (APT38) Live Infrastructure Hunting"
 date: 2025-06-23 08:09:52 +0200
-categories: [Infrastructure adversary hunting, Threat Intelligence]
+categories: [Threat Intelligence]
 tags: [kimsuky, opsec-failure, threat-actors]
 image:
   path: WhatsApp-Image-2025-06-20-at-04.38.46_092a00b8.jpg

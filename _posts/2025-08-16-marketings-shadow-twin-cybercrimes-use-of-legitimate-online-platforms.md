@@ -1,7 +1,7 @@
 ---
 title: "Marketing’s Shadow Twin: Cybercrime’s Use of Legitimate Online Platforms"
 date: 2025-08-16 01:22:58 +0200
-categories: [Malware Analysis, Threat Intelligence]
+categories: [Threat Intelligence]
 tags: [investigation, threat-actors]
 image:
   path: WhatsApp-Image-2025-08-16-at-05.53.17_1529c929.jpg
