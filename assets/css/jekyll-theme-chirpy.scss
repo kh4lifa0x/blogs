@@ -4,14 +4,92 @@
 @use "main";
 
 /* ===================================================================
-   Custom animations for the blog (added on top of the Chirpy theme)
+   Custom blog styling on top of Chirpy
+   - Compact post cards: small square thumbnail on the left
+   - Subtle, elegant animations
    =================================================================== */
 
-/* Entrance: fade + slide up */
-@keyframes ak-fade-up {
+/* ---------- Compact list / pinned cards ---------- */
+#post-list {
+  margin-top: 1.5rem;
+
+  .card-wrapper {
+    margin-bottom: 1rem;
+  }
+
+  /* force a horizontal row with the image on the LEFT (override reverse) */
+  .post-preview {
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: stretch;
+  }
+
+  /* image column -> small fixed square thumbnail */
+  .col-md-5 {
+    flex: 0 0 clamp(88px, 24vw, 132px) !important;
+    width: clamp(88px, 24vw, 132px) !important;
+    max-width: 132px !important;
+  }
+
+  /* body column takes the rest */
+  .col-md-7 {
+    flex: 1 1 auto !important;
+    width: auto !important;
+    max-width: none !important;
+    min-width: 0; /* allow text truncation */
+  }
+
+  .preview-img {
+    height: 100%;
+    width: 100%;
+    aspect-ratio: auto !important; /* fill the card height instead of wide banner */
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .card-body {
+    padding: 0.65rem 0.95rem !important;
+    justify-content: center;
+  }
+
+  .card-title {
+    font-size: 1.02rem !important;
+    line-height: 1.35 !important;
+    margin: 0 0 0.3rem !important;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .card-text.content {
+    margin: 0 0 0.4rem !important;
+
+    p {
+      font-size: 0.84rem !important;
+      line-height: 1.45 !important;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+  }
+
+  .post-meta {
+    font-size: 0.75rem !important;
+    margin-top: auto;
+  }
+}
+
+/* ---------- Subtle, elegant animations ---------- */
+@keyframes ak-fade-in {
   from {
     opacity: 0;
-    transform: translateY(18px);
+    transform: translateY(8px);
   }
   to {
     opacity: 1;
@@ -19,80 +97,54 @@
   }
 }
 
-/* Gentle fade for the main content area on load */
-#main-wrapper {
-  animation: ak-fade-up 0.45s ease both;
-}
-
-/* Post cards on the home / list pages: staggered entrance */
+/* gentle entrance for cards, with a soft, short stagger */
 #post-list .card-wrapper {
-  animation: ak-fade-up 0.5s ease both;
+  animation: ak-fade-in 0.4s cubic-bezier(0.22, 0.61, 0.36, 1) both;
 }
 
 @for $i from 1 through 12 {
   #post-list .card-wrapper:nth-child(#{$i}) {
-    animation-delay: #{$i * 0.06}s;
+    animation-delay: #{0.04 * $i}s;
   }
 }
 
-/* Smooth hover lift on cards (home list + related posts) */
-.card-wrapper {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+/* soft hover: shadow grows, barely-there lift */
+#post-list .card-wrapper {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 
   &:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.18);
+    transform: translateY(-2px);
+    box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.14);
   }
 }
 
-/* Pinned posts: subtle pulse on the pin icon so featured posts pop */
-@keyframes ak-pin-pulse {
-  0%,
-  100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.18);
-  }
+/* thumbnail: slow, subtle zoom on hover */
+#post-list .preview-img img {
+  transition: transform 0.4s ease;
+}
+#post-list .card-wrapper:hover .preview-img img {
+  transform: scale(1.05);
 }
 
-#post-list .card-wrapper .pin i,
-#post-list .card-wrapper i.fa-thumbtack {
-  animation: ak-pin-pulse 2.2s ease-in-out infinite;
-}
-
-/* Sidebar avatar: soft zoom on hover */
+/* sidebar avatar: soft zoom on hover */
 #avatar {
   transition: transform 0.35s ease;
 
   &:hover {
-    transform: scale(1.06);
+    transform: scale(1.05);
   }
 }
 
-/* Nav / sidebar links: animated underline-ish slide on hover already
-   handled by theme; add a small ease to trending tags */
-.post-tag {
-  transition: transform 0.15s ease, background-color 0.15s ease;
-
-  &:hover {
-    transform: translateY(-2px);
-  }
-}
-
-/* Respect users who prefer reduced motion */
+/* respect reduced-motion preferences */
 @media (prefers-reduced-motion: reduce) {
-  #main-wrapper,
   #post-list .card-wrapper {
     animation: none !important;
+    transition: none;
   }
-
-  #post-list .card-wrapper .pin i,
-  #post-list .card-wrapper i.fa-thumbtack {
-    animation: none !important;
+  #post-list .card-wrapper:hover {
+    transform: none;
   }
-
-  .card-wrapper:hover {
+  #post-list .card-wrapper:hover .preview-img img {
     transform: none;
   }
 }
